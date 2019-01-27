@@ -5,6 +5,14 @@ I am using the **CIFAR10** dataset and I'm training the model on a single class.
 * In the generator we use a method called Upsampling to produce images. I have used Upsampling2D but TransposeConv2d + stride or PixelShuffle could be used alternatively.
 * The Discriminator has several Conv2d layers for the classification task's.
 
+To learn a generator distribution p<sub>g</sub> over data x,the generator builds a mapping function from a prior noise distribution p<sub>z</sub>(z) to data space as G(z). The discriminator outputs, a single scalar representing the probability that x came from training data rather than p<sub>g</sub>.
+
+G and D are both trained simultaneously: we adjust parameters for G to minimize log(1 - D(G(z))
+and adjust parameters for D to minimize logD(x), as if they are following the two-player min-max
+game with value function V (G;D):
+
+![](loss.png)
+
 A lot of changes have been made in GAN's Architecture since Goodfeloow's original paper , but some things remain the same like:-
 
 * Normalizing the input
