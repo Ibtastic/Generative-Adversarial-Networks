@@ -1,4 +1,4 @@
-#Image to Image Translation with Conditional GANs.
+# Image to Image Translation with Conditional GANs.
 
 In this part of the repository I implement [Conditional GAN](https://arxiv.org/pdf/1411.1784.pdf) for Image to Image Translation based on [this](https://arxiv.org/pdf/1611.07004.pdf) paper.
 The model is trained on the [cityscapes](https://www.kaggle.com/vikramtiwari/pix2pix-dataset#cityscapes.tar.gz) dataset.
